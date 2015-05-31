@@ -1,0 +1,27 @@
+{
+  "name": "Jumpstart",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "browserify": "^10.2.3",
+    "font-awesome-stylus": "^4.3.0",
+    "gulp": "^3.8.11",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "gulp.spritesmith": "^3.7.0",
+    "jeet": "^6.1.2",
+    "jquery": "^2.1.4",
+    "jshint-stylish": "^2.0.0",
+    "nib": "^1.1.0",
+    "rupture": "^0.6.1",
+    "stylus-normalize": "^3.0.3",
+    "stylus-triangle": "^1.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

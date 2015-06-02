@@ -88,6 +88,15 @@ gulp.task('sprite', function () {
 });
 
 /**
+ * Watch
+ */
+
+gulp.task('watch', function () {
+  gulp.watch('./src/js/**/*.js', ['lin', 'browserify']);
+  gulp.watch('./src/stylus/**/*.styl', ['stylus']);
+});
+
+/**
  * Default Task
  *
  * Run all the tasks on all files

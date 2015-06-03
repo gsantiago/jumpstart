@@ -92,7 +92,7 @@ gulp.task('sprite', function () {
  */
 
 gulp.task('watch', function () {
-  gulp.watch('./src/js/**/*.js', ['lin', 'browserify']);
+  gulp.watch('./src/js/**/*.js', ['lint', 'browserify']);
   gulp.watch('./src/stylus/**/*.styl', ['stylus']);
 });
 

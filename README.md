@@ -25,7 +25,11 @@ Install all dependencies
 
 ```npm install```
 
-**Then, use some Gulp commands:**
+If you don't have Gulp globally installed, then install it:
+
+```npm install -g gulp```
+
+Now, it's just use the available gulp commands:
 
 ```gulp watch```
 
@@ -91,5 +95,3 @@ with only two differences:
     c: 3
   };
   ```
-
-

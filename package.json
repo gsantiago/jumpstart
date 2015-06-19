@@ -19,7 +19,6 @@
     "jshint-stylish": "^2.0.0",
     "nib": "^1.1.0",
     "rupture": "^0.6.1",
-    "stylus-normalize": "^3.0.3",
     "stylus-triangle": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

@@ -8,8 +8,8 @@
 * [X] Nib
 * [X] Jeet
 * [X] Rupture
-* [X] Stylus Triangle
-* [ ] Utilities Classes and Extra Mixins
+* [X] Extra Mixins
+* [ ] Utilities Classes
 * [X] FontAwesome
 * [X] JSHint
 * [X] JSCS

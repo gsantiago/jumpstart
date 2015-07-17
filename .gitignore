@@ -1,3 +1,4 @@
 node_modules
 dist/assets/css/*.min.css
 dist/assets/js/*.min.js
+dist/assets/**/*.map

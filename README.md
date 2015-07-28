@@ -37,9 +37,9 @@ Now, it's just use the available gulp commands:
 
 ```gulp sprite```
 
-```gulp stylus```
+```gulp css```
 
-```gulp browserify```
+```gulp js```
 
 ## Structure
 

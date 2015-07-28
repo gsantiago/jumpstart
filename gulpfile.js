@@ -20,7 +20,7 @@ var spritesmith = require('gulp.spritesmith');
  * Stylus Task
  */
 
-gulp.task('stylus', function () {
+gulp.task('css', function () {
   gulp.src('./src/stylus/index.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus({
@@ -41,7 +41,7 @@ gulp.task('stylus', function () {
  * Browserify Task
  */
 
-gulp.task('browserify', function () {
+gulp.task('js', function () {
   var b = browserify({
     entries: './src/js/main.js',
     debug: true
@@ -92,16 +92,12 @@ gulp.task('sprite', function () {
  */
 
 gulp.task('watch', function () {
-  gulp.watch('./src/js/**/*.js', ['lint', 'browserify']);
-  gulp.watch('./src/stylus/**/*.styl', ['stylus']);
+  gulp.watch('./src/js/**/*.js', ['lint', 'js']);
+  gulp.watch('./src/stylus/**/*.styl', ['css']);
 });
 
 /**
  * Default Task
- *
- * Run all the tasks on all files
  */
 
-gulp.task('default', function () {
-
-});
+gulp.task('default', ['sprite', 'css', 'js']);

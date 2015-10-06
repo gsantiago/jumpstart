@@ -12,9 +12,8 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var gutil = require('gulp-util');
-var jshint = require('gulp-jshint');
-var jscs = require('gulp-jscs');
 var spritesmith = require('gulp.spritesmith');
+var standard = require('gulp-standard');
 
 /**
  * Stylus Task
@@ -59,14 +58,15 @@ gulp.task('js', function () {
 });
 
 /**
- * Runs JSHint and JSCS on our JS code
+ * Runs Standard against the JS code.
  */
 
 gulp.task('lint', function () {
   return gulp.src('./src/js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jscs());
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      breakOnError: true
+    }));
 });
 
 /**

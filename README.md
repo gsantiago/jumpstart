@@ -65,33 +65,4 @@ __js/
 
 ## Code Style
 
-It follows the [Node Style Guide](https://github.com/felixge/node-style-guide)
-with only two differences:
-
-1. Spaces before functions opening round braces are **REQUIRED**
-
-  ```javascript
-  // WRONG
-  var myFunction() { ... };
-
-  // RIGHT
-  var myFunction () { ... };
-  ```
-
-2. Commas after the last item in a literal object are **PROHIBITED**.
-
-  ```javascript
-  // WRONG
-  var obj = {
-    a: 1,
-    b: 2,
-    c: 3,
-  };
-
-  // RIGHT
-  var obj = {
-    a: 1,
-    b: 2,
-    c: 3
-  };
-  ```
+It follows the [JavaScript Standard Style](https://github.com/feross/standard).

@@ -9,7 +9,7 @@
 * [X] Jeet
 * [X] Rupture
 * [X] Extra Mixins
-* [ ] Utilities Classes
+* [X] Utilities Classes
 * [X] FontAwesome
 * [X] Standard Style
 * [X] Editorconfig

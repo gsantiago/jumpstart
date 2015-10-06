@@ -11,8 +11,7 @@
 * [X] Extra Mixins
 * [ ] Utilities Classes
 * [X] FontAwesome
-* [X] JSHint
-* [X] JSCS
+* [X] Standard Style
 * [X] Editorconfig
 
 ## Usage

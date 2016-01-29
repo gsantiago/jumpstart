@@ -10,7 +10,7 @@
 * [X] Rupture
 * [X] Extra Mixins
 * [X] Utilities Classes
-* [X] FontAwesome
+* [X] Icon fonts
 * [X] Standard Style
 * [X] Editorconfig
 

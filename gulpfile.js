@@ -14,6 +14,8 @@ var uglify = require('gulp-uglify')
 var gutil = require('gulp-util')
 var spritesmith = require('gulp.spritesmith')
 var standard = require('gulp-standard')
+var iconfont = require('gulp-iconfont')
+var consolidate = require('gulp-consolidate')
 
 /**
  * Stylus Task
@@ -88,12 +90,46 @@ gulp.task('sprite', function () {
 })
 
 /**
+ * Iconfont
+ * https://github.com/nfroidure/gulp-iconfont
+ */
+
+gulp.task('icons', function () {
+  return gulp.src(['src/icons/*.svg'])
+    .pipe(iconfont({
+      fontName: 'icons', // required
+      appendUnicode: true, // recommended option
+      normalize: true,
+      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+      timestamp: Math.round(Date.now() / 1000) // recommended to get consistent builds when watching files
+    }))
+    .on('glyphs', function (glyphs, options) {
+      glyphs.map(function (g) {
+        g.className = 'icon'
+        g.unicode = '\\' + g.unicode[0].charCodeAt(0).toString(16).toUpperCase()
+        return g
+      })
+      gulp.src('src/icons/template.styl')
+        .pipe(consolidate('handlebars', {
+          glyphs: glyphs,
+          fontName: 'icons',
+          fontPath: '../fonts/',
+          className: 'icon'
+        }))
+        .pipe(rename('icons.styl'))
+        .pipe(gulp.dest('src/stylus/vendor'))
+    })
+    .pipe(gulp.dest('dist/assets/fonts'))
+})
+
+/**
  * Watch
  */
 
 gulp.task('watch', function () {
-  gulp.watch('./src/js/**/*.js', ['lint', 'js'])
-  gulp.watch('./src/stylus/**/*.styl', ['css'])
+  gulp.watch('src/js/**/*.js', ['lint', 'js'])
+  gulp.watch('src/stylus/**/*.styl', ['css'])
+  gulp.watch('src/icons/*.svg', ['icons'])
 })
 
 /**

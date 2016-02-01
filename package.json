@@ -4,7 +4,6 @@
   "private": true,
   "devDependencies": {
     "browserify": "^10.2.3",
-    "font-awesome-stylus": "^4.3.0",
     "gulp": "^3.8.11",
     "gulp-consolidate": "^0.1.2",
     "gulp-iconfont": "^5.0.1",

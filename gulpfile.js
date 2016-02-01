@@ -34,6 +34,9 @@ gulp.task('css', function () {
       'include css': true,
       paths: ['node_modules']
     }))
+    .on('error', function (err) {
+      console.log(err)
+    })
     .pipe(sourcemaps.write('.'))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./dist/assets/css'))

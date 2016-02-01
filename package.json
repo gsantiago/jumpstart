@@ -22,6 +22,7 @@
     "jshint-stylish": "^2.0.0",
     "mixins-stylus": "^0.0.5",
     "nib": "^1.1.0",
+    "reactify": "^1.1.1",
     "rupture": "^0.6.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

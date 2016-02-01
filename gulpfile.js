@@ -16,6 +16,7 @@ var spritesmith = require('gulp.spritesmith')
 var standard = require('gulp-standard')
 var iconfont = require('gulp-iconfont')
 var consolidate = require('gulp-consolidate')
+var reactify = require('reactify')
 
 /**
  * Stylus Task
@@ -47,6 +48,8 @@ gulp.task('js', function () {
     entries: './src/js/main.js',
     debug: true
   })
+  
+  b.transform(reactify)
 
   return b.bundle()
     .pipe(source('bundle.min.js'))

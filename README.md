@@ -8,6 +8,7 @@
 * [X] Nib
 * [X] Jeet
 * [X] Rupture
+* [X] JSX
 * [X] Extra Mixins
 * [X] Utilities Classes
 * [X] Icon fonts

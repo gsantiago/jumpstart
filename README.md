@@ -41,6 +41,8 @@ Now, it's just use the available gulp commands:
 
 ```gulp js```
 
+```gulp icons```
+
 ## Structure
 
 ```

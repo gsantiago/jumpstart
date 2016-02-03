@@ -55,6 +55,9 @@ gulp.task('js', function () {
   b.transform(reactify)
 
   return b.bundle()
+    .on('error', function (err) {
+      console.log(err)
+    })
     .pipe(source('bundle.min.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))

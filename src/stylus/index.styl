@@ -1,14 +1,36 @@
-/**
- * Index.styl
- *
- * Import all .styl needed for the project.
- */
+// =============================================================================
+// Your Project
+// -----------------------------------------------------------------------------
+// This is the main stylus file.
+// Here you define the global variables and import all the dependencies.
+//
+// This project tries to follow the RSCSS ideas for building
+// a maintainable and modular CSS.
+// Check out more about it here: http://rscss.io
+//
+// [PT-BR] Esse projeto segue as ideias do RCSS. Se quiser ler um artigo em
+// português sobre ele, veja aqui:
+// http://willianjusten.com.br/falando-sobre-rscss/
+// =============================================================================
 
-// Settings
-// --------
+
+// Paths
+// -----
 
 $IMG-PATH = '../img/'
 $FONT-PATH = '../fonts/'
+
+
+// Breakpoints
+// -----------
+
+$bp = {
+  lg: 1000px,
+  md: 800px,
+  sm: 600px,
+  xs: 400px
+}
+
 
 // Mixins
 // ------
@@ -18,18 +40,18 @@ $FONT-PATH = '../fonts/'
 @require 'rupture'
 @require 'mixins-stylus'
 
-// Modules
+
+// Vendor
+// ------
+
+@import 'vendor/*'
+
+// Components
+// ----------
+
+@import 'components/*'
+
+// Helpers
 // -------
 
-normalize-css()
-
-@import 'vendor/icons'
-
-@import 'modules/classes'
-
-@import 'modules/base'
-
-@import 'modules/browserupgrade'
-
-// @import 'vendor/slick'
-// @import 'vendor/social-likes.css'
+@import 'helpers/*'

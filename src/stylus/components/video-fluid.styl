@@ -1,0 +1,25 @@
+// =============================================================================
+// video-fluid
+// -----------------------------------------------------------------------------
+// A component for responsive videos that use iframes (youtube, vimeo, etc).
+// https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+//
+// Usage:
+// ```
+// <div class="video-fluid">
+//   <iframe ...>
+// </div>
+// ```
+// =============================================================================
+
+.video-fluid
+  position relative
+  padding-bottom 56.25%
+  padding-top 25px
+  height 0
+
+  > iframe
+    position absolute
+    top 0
+    left 0
+    size 100%
